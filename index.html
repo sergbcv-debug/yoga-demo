@@ -47,9 +47,8 @@ h1{font-family:var(--serif);font-size:clamp(34px,4.6vw,56px);line-height:1.08;le
 h1 em{font-style:italic;color:var(--accent-ink)}
 .lede{margin-top:22px;max-width:44ch;font-size:18px;color:var(--muted)}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.photo{position:relative;border:1px solid var(--line);background:var(--panel);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;padding:28px;text-align:center}
-.photo span{color:var(--muted);font-size:13px;max-width:24ch}
-.photo::before{content:"";position:absolute;inset:10px;border:1px dashed var(--line)}
+.photo{position:relative;border:1px solid var(--line);background:var(--panel);aspect-ratio:4/5;overflow:hidden;margin:0}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 32%}
 .sign{margin-top:16px;font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px}
 
 /* секции */
@@ -68,11 +67,15 @@ h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.1;fon
 .sched-foot{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:14px;color:var(--muted)}
 
 /* практика */
-.practice{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
-.practice div{padding:24px 22px 4px;border-right:1px solid var(--line)}
-.practice div:last-child{border-right:0}
+.practice-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start}
+.practice{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.practice div{padding:20px 0 4px;border-bottom:1px solid var(--line)}
+.practice div:last-child{border-bottom:0}
 .practice h3{font-family:var(--serif);font-size:21px;font-weight:400;margin-bottom:8px}
-.practice p{color:var(--muted);font-size:15px}
+.practice p{color:var(--muted);font-size:15px;max-width:46ch}
+.practice-photo{margin:0;border:1px solid var(--line);background:var(--panel)}
+.practice-photo img{width:100%;height:auto;display:block}
+.practice-photo figcaption{padding:10px 12px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
 
 /* о себе */
 .about{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start}
@@ -87,6 +90,8 @@ h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.1;fon
 /* выезды */
 .trips{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .trip{background:var(--panel);border:1px solid var(--line);padding:22px 20px 24px;display:flex;flex-direction:column}
+.trip-photo{margin:-22px -20px 18px;border-bottom:1px solid var(--line)}
+.trip-photo img{width:100%;height:170px;object-fit:cover;object-position:50% 60%}
 .trip .when{color:var(--accent-ink);margin-bottom:10px}
 .trip h3{font-family:var(--serif);font-size:21px;font-weight:400;margin-bottom:10px;line-height:1.2}
 .trip ul{list-style:none;color:var(--muted);font-size:15px}
@@ -115,9 +120,9 @@ h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.1;fon
 @media (max-width:1000px){
   .hero-grid,.about,.booking{grid-template-columns:1fr}
   .photo{max-width:420px}
-  .practice,.trips{grid-template-columns:1fr}
-  .practice div{border-right:0;border-bottom:1px solid var(--line);padding-bottom:22px}
-  .practice div:last-child{border-bottom:0}
+  .practice-wrap{grid-template-columns:1fr}
+  .trips{grid-template-columns:1fr}
+  .trip-photo img{height:220px}
 }
 @media (max-width:680px){
   body{font-size:16px}
@@ -161,7 +166,9 @@ h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.1;fon
         </div>
       </div>
       <div>
-        <div class="photo"><span>Портрет Ангелины — сюда пойдёт её фото, вертикальное 4:5</span></div>
+        <figure class="photo">
+          <img src="assets/hero.webp" width="900" height="1200" alt="Ангелина на улице с микрофоном — ведёт практику" decoding="async">
+        </figure>
         <p class="sign">«можно падать, и там ничего ужасного»</p>
       </div>
     </div>
@@ -196,19 +203,25 @@ h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.1;fon
       <div class="sec-head">
         <h2>Как проходит практика</h2>
       </div>
-      <div class="practice">
-        <div>
-          <h3>Дыхание первым</h3>
-          <p>Начинаем с дыхания и только потом двигаемся. Если дыхание сбилось — сбавили темп, это не поражение, а работа.</p>
+      <div class="practice-wrap">
+        <div class="practice">
+          <div>
+            <h3>Дыхание первым</h3>
+            <p>Начинаем с дыхания и только потом двигаемся. Если дыхание сбилось — сбавили темп, это не поражение, а работа.</p>
+          </div>
+          <div>
+            <h3>Взгляд и внимание</h3>
+            <p>Смотрим, куда направлено внимание: в сравнение с соседом по коврику или в собственное тело. Второе полезнее.</p>
+          </div>
+          <div>
+            <h3>Можно падать</h3>
+            <p>Балансы и сложные связки — не экзамен. Подойдёт и тем, кого бакасаной не удивить, и тем, кого балансы пока пугают.</p>
+          </div>
         </div>
-        <div>
-          <h3>Взгляд и внимание</h3>
-          <p>Смотрим, куда направлено внимание: в сравнение с соседом по коврику или в собственное тело. Второе полезнее.</p>
-        </div>
-        <div>
-          <h3>Можно падать</h3>
-          <p>Балансы и сложные связки — не экзамен. Подойдёт и тем, кого бакасаной не удивить, и тем, кого балансы пока пугают.</p>
-        </div>
+        <figure class="practice-photo">
+          <img src="assets/class.webp" width="1200" height="1597" alt="Групповая практика на траве, лето, много ковриков" loading="lazy" decoding="async">
+          <figcaption>Практика на улице. У большинства это второй раз в жизни.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -243,6 +256,7 @@ h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.1;fon
       </div>
       <div class="trips">
         <article class="trip">
+          <figure class="trip-photo"><img src="assets/house.webp" width="1200" height="1600" alt="Тёмный дом с панорамными окнами в лесу" loading="lazy" decoding="async"></figure>
           <p class="when mono">3–5 января · Карма Хаус</p>
           <h3>Три дня практики</h3>
           <ul>
