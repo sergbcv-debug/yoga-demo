@@ -63,7 +63,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opa
 .hero-facts div{color:var(--muted);font-size:13px}
 .hero-facts b{display:block;color:var(--ink);font-family:var(--serif);font-size:19px;font-weight:400;margin-bottom:2px}
 .hero-photo{position:relative;overflow:hidden;background:var(--paper-2);min-height:420px}
-.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform:scale(1.03);animation:heroZoom 16s ease-out forwards}
+.hero-photo img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:50% 22%;transform:scale(1.03);animation:heroZoom 16s ease-out forwards;will-change:transform}
 @keyframes heroZoom{to{transform:scale(1)}}
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,240,230,.35) 0%,rgba(245,240,230,0) 22%,rgba(28,24,19,.35) 100%)}
 .hero-quote{position:absolute;left:24px;right:24px;bottom:22px;z-index:2;color:#fff;font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.7vw,22px);line-height:1.3;text-shadow:0 1px 18px rgba(20,16,12,.6)}
@@ -75,6 +75,11 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opa
 .marquee span{font-family:var(--serif);font-size:clamp(22px,3vw,34px);padding:14px 26px;white-space:nowrap;opacity:.92}
 .marquee span::after{content:"✳";margin-left:26px;color:var(--gold);font-size:.7em;vertical-align:middle}
 @keyframes slide{to{transform:translateX(-50%)}}
+.marquee-rev{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.marquee-rev span{color:var(--muted);font-style:italic}
+.marquee-rev span::after{color:var(--accent);opacity:.6}
+.marquee-rev div{animation:slideRev 46s linear infinite}
+@keyframes slideRev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
 /* секции */
 .section{padding:86px 0;border-top:1px solid var(--line)}
@@ -97,10 +102,27 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
 .sched-foot{margin-top:22px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:15px}
 
 /* цитата */
-.quote-block{padding:96px 0;background:var(--ink);color:var(--light);text-align:center;border-top:0}
-.quote-block p{font-family:var(--serif);font-style:italic;font-size:clamp(28px,4.6vw,56px);line-height:1.16;max-width:18ch;margin:0 auto}
-.quote-block .mark{color:var(--gold);font-family:var(--serif);font-size:clamp(40px,6vw,72px);line-height:1;display:block;margin-bottom:8px}
-.quote-block small{display:block;margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,242,232,.55)}
+.quote-block{padding:104px 0;background:var(--ink);color:var(--light);text-align:center;border-top:0;position:relative;overflow:hidden}
+.quote-block::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 50% 40%,rgba(227,180,124,.14),transparent 62%);pointer-events:none}
+.quote-block p{font-family:var(--serif);font-style:italic;font-size:clamp(28px,4.6vw,56px);line-height:1.16;max-width:18ch;margin:0 auto;position:relative}
+.quote-block .mark{color:var(--gold);font-family:var(--serif);font-size:clamp(40px,6vw,72px);line-height:1;display:block;margin-bottom:8px;position:relative;transform:scale(.8);opacity:0;transition:transform 1s cubic-bezier(.2,.7,.2,1),opacity 1s ease}
+.quote-block.in .mark{transform:none;opacity:1}
+.quote-block .w{display:inline-block;opacity:0;transform:translateY(.35em);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.quote-block.in .w{opacity:1;transform:none}
+.quote-block small{display:block;margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,242,232,.7);position:relative}
+
+/* полоса с фото */
+.band{position:relative;min-height:620px;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink);color:#fff;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);width:100vw}
+.band img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:50% 62%;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.35) 0%,rgba(20,16,12,.15) 38%,rgba(20,16,12,.82) 100%)}
+.band-in{position:relative;z-index:2;padding:60px 0 44px;width:100%}
+.band .when{color:var(--gold)}
+.band h3{font-family:var(--serif);font-size:clamp(30px,4.6vw,54px);font-weight:400;line-height:1.04;margin:10px 0 18px;max-width:16ch}
+.band ul{list-style:none;display:flex;gap:10px 22px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-size:15px;max-width:70ch}
+.band li{position:relative;padding-left:16px}
+.band li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;background:var(--gold)}
+.band-foot{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:26px;font-size:15px;color:rgba(255,255,255,.85)}
+.band-foot .price{font-weight:600;color:#fff}
 
 /* практика */
 .practice{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:start}
@@ -128,6 +150,7 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
 .fact dd{font-size:16px}
 
 /* выезды */
+.trips-wrap{margin-bottom:22px}
 .trips{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .trip{background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease}
 .trip.featured{grid-column:1 / -1;display:grid;grid-template-columns:1.05fr .95fr}
@@ -281,10 +304,10 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
     </div>
   </section>
 
-  <section class="quote-block">
+  <section class="quote-block" id="quote">
     <div class="wrap">
       <span class="mark">«</span>
-      <p>можно падать, и там ничего ужасного</p>
+      <p data-split>можно падать, и там ничего ужасного</p>
       <small>из практики</small>
     </div>
   </section>
@@ -350,17 +373,31 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
         <h2>То, что не помещается<br>в класс</h2>
         <p class="sec-note">Три дня в доме с панорамными окнами, парения с чаем, горы. Мест всегда немного — в прошлую Грузию было восемь человек.</p>
       </div>
-      <div class="trips">
-        <article class="trip featured reveal">
-          <figure class="trip-photo"><img src="assets/house.webp" width="1200" height="1600" alt="Тёмный дом с панорамными окнами в лесу" loading="lazy" decoding="async"></figure>
-          <div class="trip-body">
-            <p class="when mono">3–5 января · Карма Хаус</p>
-            <h3>Три дня практики</h3>
-            <ul><li>йога и медитации</li><li>трёхразовое питание</li><li>баня и парения</li><li>чайные церемонии</li><li>снежные прогулки</li></ul>
-            <p class="trip-foot"><span class="price">Стоимость и трансфер — [ПОДТВЕРДИТЬ]</span><br><a href="#booking">Написать про ретрит</a></p>
+      <div class="trips-wrap">
+        <div class="band reveal">
+          <img src="assets/house.webp" width="1200" height="1600" alt="Тёмный дом с панорамными окнами в лесу" loading="lazy" decoding="async" data-parallax="0.12">
+          <div class="band-in">
+            <div class="wrap">
+              <p class="when mono">3–5 января · Карма Хаус</p>
+              <h3>Три дня практики</h3>
+              <ul>
+                <li>йога и медитации</li>
+                <li>трёхразовое питание</li>
+                <li>баня и парения</li>
+                <li>чайные церемонии</li>
+                <li>снежные прогулки</li>
+              </ul>
+              <p class="band-foot">
+                <span class="price">Стоимость и трансфер — [ПОДТВЕРДИТЬ]</span>
+                <a class="btn btn-light" href="#booking">Написать про ретрит</a>
+              </p>
+            </div>
           </div>
-        </article>
-        <article class="trip reveal d1">
+        </div>
+      </div>
+
+      <div class="trips">
+        <article class="trip reveal">
           <div class="trip-body">
             <p class="when mono">Выезд на день · баня</p>
             <h3>Пять часов с парениями</h3>
@@ -368,7 +405,7 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
             <p class="trip-foot"><span class="price">6 500 ₽ · предоплата 3 000 ₽</span><br><span class="mono">цены прошлого выезда</span></p>
           </div>
         </article>
-        <article class="trip reveal d2">
+        <article class="trip reveal d1">
           <div class="trip-body">
             <p class="when mono">Кэмп · Грузия</p>
             <h3>Горы и глэмпинг-тенты</h3>
@@ -405,6 +442,12 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
       </div>
     </div>
   </section>
+  <div class="marquee marquee-rev" aria-hidden="true">
+    <div>
+      <span>дыхание</span><span>внимание</span><span>коврик</span><span>чай</span><span>парение</span><span>горы</span><span>тишина</span><span>смех</span>
+      <span>дыхание</span><span>внимание</span><span>коврик</span><span>чай</span><span>парение</span><span>горы</span><span>тишина</span><span>смех</span>
+    </div>
+  </div>
 </main>
 
 <footer class="foot">
@@ -420,25 +463,67 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
 
 <script>
 (function () {
-  var head = document.getElementById('head');
-  var onScroll = function () {
-    head.classList.toggle('solid', window.scrollY > window.innerHeight * 0.6);
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var items = document.querySelectorAll('.reveal');
+  /* шапка */
+  var head = document.getElementById('head');
+  var onScrollHead = function () {
+    head.classList.toggle('solid', window.scrollY > 40);
+  };
+  onScrollHead();
+  window.addEventListener('scroll', onScrollHead, { passive: true });
+
+  /* цитата по словам */
+  document.querySelectorAll('[data-split]').forEach(function (el) {
+    var words = el.textContent.trim().split(/\s+/);
+    el.textContent = '';
+    words.forEach(function (w, i) {
+      var s = document.createElement('span');
+      s.className = 'w';
+      s.textContent = w;
+      s.style.transitionDelay = (i * 0.055) + 's';
+      el.appendChild(s);
+      if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
+    });
+  });
+
+  /* появление */
+  var items = document.querySelectorAll('.reveal, .quote-block');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
     items.forEach(function (el) { io.observe(el); });
   } else {
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
+  /* параллакс фото */
+  var px = [].slice.call(document.querySelectorAll('[data-parallax]'));
+  if (px.length && !reduce) {
+    var ticking = false;
+    var apply = function () {
+      var vh = window.innerHeight;
+      px.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        var k = parseFloat(el.getAttribute('data-parallax')) || 0.1;
+        var shift = (r.top + r.height / 2 - vh / 2) * -k;
+        el.style.transform = 'translate3d(0,' + shift.toFixed(1) + 'px,0)';
+      });
+      ticking = false;
+    };
+    var request = function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(apply); }
+    };
+    apply();
+    window.addEventListener('scroll', request, { passive: true });
+    window.addEventListener('resize', request);
+  }
+
+  /* форма */
   var form = document.getElementById('bookingForm');
   var status = form.querySelector('.status');
   form.addEventListener('submit', function (e) {
