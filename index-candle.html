@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ангелина Бабушкина — йога в Петербурге</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Дживамукти, хатха и виньяса в Петербурге: группы в студиях, индивидуальные занятия онлайн и офлайн, выезды, баня и ретриты. Расписание и запись.">
+<link rel="preload" as="image" href="assets/hero.webp" type="image/webp" fetchpriority="high">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23221E19'/%3E%3Cpath d='M6 22c6-8 14-8 20 0' stroke='%23D69A5E' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<script>document.documentElement.className += ' js';</script>
+<style>
+:root{
+  --paper:#F5F0E6;
+  --paper-2:#EFE8DA;
+  --ink:#221E19;
+  --ink-2:#2E2822;
+  --muted:#6A6357;
+  --line:#DCD2C0;
+  --accent:#8C5A2B;
+  --accent-ink:#6E4520;
+  --light:#F7F2E8;
+  --gold:#E3B47C;
+  --serif:"Georgia","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.62;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1120px,100% - 44px);margin:0 auto}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+
+/* зерно */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;background-image:url("assets/noise.png");background-size:64px 64px}
+
+/* шапка */
+.head{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(245,240,230,.97);border-bottom:1px solid var(--line);transition:padding .35s ease;padding:14px 0}
+.head-in{display:flex;align-items:center;gap:26px}
+.brand{font-family:var(--serif);font-size:20px;color:var(--ink);letter-spacing:.01em}
+.nav{display:flex;gap:22px;margin-left:auto}
+.nav a{font-size:15px;color:var(--muted);padding:3px 0;border-bottom:1px solid transparent;transition:color .2s ease,border-color .2s ease}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid var(--accent);transition:background .2s ease,transform .2s ease,color .2s ease}
+.btn:hover{background:var(--accent-ink);border-color:var(--accent-ink);transform:translateY(-1px)}
+.btn-light{background:var(--light);border-color:var(--light);color:var(--ink)}
+.btn-light:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--light);border-color:var(--ink)}
+.head.solid{padding:10px 0}
+
+/* первый экран */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.02fr .98fr;align-items:stretch;background:var(--paper);padding-top:74px}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:56px 44px 56px max(22px,calc((100vw - 1120px)/2))}
+.hero-eyebrow{color:var(--accent-ink);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-size:clamp(38px,5.6vw,80px);line-height:.98;letter-spacing:-.025em;font-weight:400;max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-lede{margin-top:24px;max-width:44ch;font-size:18px;color:var(--muted)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-facts{display:flex;gap:30px;flex-wrap:wrap;margin-top:52px;padding-top:20px;border-top:1px solid var(--line)}
+.hero-facts div{color:var(--muted);font-size:13px}
+.hero-facts b{display:block;color:var(--ink);font-family:var(--serif);font-size:19px;font-weight:400;margin-bottom:2px}
+.hero-photo{position:relative;overflow:hidden;background:var(--paper-2);min-height:420px}
+.hero-photo img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:50% 22%;transform:scale(1.03);animation:heroZoom 16s ease-out forwards;will-change:transform}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,240,230,.35) 0%,rgba(245,240,230,0) 22%,rgba(28,24,19,.35) 100%)}
+.hero-quote{position:absolute;left:24px;right:24px;bottom:22px;z-index:2;color:#fff;font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.7vw,22px);line-height:1.3;text-shadow:0 1px 18px rgba(20,16,12,.6)}
+.cue{position:absolute;left:max(22px,calc((100vw - 1120px)/2));bottom:18px;z-index:2;color:var(--muted);font-size:11px;letter-spacing:.2em;text-transform:uppercase;display:none}
+
+/* бегущая строка */
+.marquee{background:var(--ink);color:var(--paper);overflow:hidden;border-top:1px solid rgba(255,255,255,.08)}
+.marquee div{display:flex;gap:0;width:max-content;animation:slide 38s linear infinite}
+.marquee span{font-family:var(--serif);font-size:clamp(22px,3vw,34px);padding:14px 26px;white-space:nowrap;opacity:.92}
+.marquee span::after{content:"✳";margin-left:26px;color:var(--gold);font-size:.7em;vertical-align:middle}
+@keyframes slide{to{transform:translateX(-50%)}}
+.marquee-rev{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.marquee-rev span{color:var(--muted);font-style:italic}
+.marquee-rev span::after{color:var(--accent);opacity:.6}
+.marquee-rev div{animation:slideRev 46s linear infinite}
+@keyframes slideRev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* секции */
+.section{padding:86px 0;border-top:1px solid var(--line)}
+.section.alt{background:var(--paper-2)}
+.sec-head{margin-bottom:34px}
+.kicker{color:var(--accent-ink);margin-bottom:14px}
+h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;font-weight:400;letter-spacing:-.015em}
+.sec-note{margin-top:12px;color:var(--muted);font-size:16px;max-width:56ch}
+
+/* расписание */
+.sched{width:100%;border-collapse:collapse}
+.sched tr{border-top:1px solid var(--line);transition:background .2s ease}
+.sched tr:hover{background:rgba(140,90,43,.05)}
+.sched th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400;text-align:left;padding:12px 10px}
+.sched td{text-align:left;padding:20px 10px;vertical-align:middle}
+.sched td.day{font-family:var(--serif);font-size:clamp(20px,2.2vw,27px)}
+.sched td.time{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.sched td.place{font-size:15px;color:var(--muted)}
+.sched td.type{font-size:16px}
+.sched-foot{margin-top:22px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:15px}
+
+/* цитата */
+.quote-block{padding:104px 0;background:var(--ink);color:var(--light);text-align:center;border-top:0;position:relative;overflow:hidden}
+.quote-block::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 50% 40%,rgba(227,180,124,.14),transparent 62%);pointer-events:none}
+.quote-block p{font-family:var(--serif);font-style:italic;font-size:clamp(28px,4.6vw,56px);line-height:1.16;max-width:18ch;margin:0 auto;position:relative}
+.quote-block .mark{color:var(--gold);font-family:var(--serif);font-size:clamp(40px,6vw,72px);line-height:1;display:block;margin-bottom:8px;position:relative;transform:scale(.8);opacity:0;transition:transform 1s cubic-bezier(.2,.7,.2,1),opacity 1s ease}
+.quote-block.in .mark{transform:none;opacity:1}
+.quote-block .w{display:inline-block;opacity:0;transform:translateY(.35em);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.quote-block.in .w{opacity:1;transform:none}
+.quote-block small{display:block;margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,242,232,.7);position:relative}
+
+/* полоса с фото */
+.band{position:relative;min-height:620px;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink);color:#fff;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);width:100vw}
+.band img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:50% 62%;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.35) 0%,rgba(20,16,12,.15) 38%,rgba(20,16,12,.82) 100%)}
+.band-in{position:relative;z-index:2;padding:60px 0 44px;width:100%}
+.band .when{color:var(--gold)}
+.band h3{font-family:var(--serif);font-size:clamp(30px,4.6vw,54px);font-weight:400;line-height:1.04;margin:10px 0 18px;max-width:16ch}
+.band ul{list-style:none;display:flex;gap:10px 22px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-size:15px;max-width:70ch}
+.band li{position:relative;padding-left:16px}
+.band li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;background:var(--gold)}
+.band-foot{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:26px;font-size:15px;color:rgba(255,255,255,.85)}
+.band-foot .price{font-weight:600;color:#fff}
+
+/* практика */
+.practice{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:start}
+.steps{border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+.step .num{font-family:var(--serif);font-size:30px;line-height:1;color:var(--accent);opacity:.75}
+.step h3{font-family:var(--serif);font-size:23px;font-weight:400;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px;max-width:44ch}
+.shot{position:relative;overflow:hidden;border:1px solid var(--line)}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.shot:hover img{transform:scale(1.03)}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;color:#fff;font-size:13px;background:linear-gradient(180deg,transparent,rgba(20,16,12,.75))}
+
+/* о себе */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+.about p{color:var(--muted);max-width:52ch}
+.about p+p{margin-top:15px}
+.about strong{color:var(--ink);font-weight:600}
+.about-photo{margin:0;border:1px solid var(--line);overflow:hidden}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:34px;border-top:1px solid var(--line)}
+.fact{padding:16px 0;border-bottom:1px solid var(--line)}
+.fact:nth-child(odd){padding-right:20px}
+.fact dt{color:var(--accent-ink);margin-bottom:4px}
+.fact dd{font-size:16px}
+
+/* выезды */
+.trips-wrap{margin-bottom:22px}
+.trips{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.trip{background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease}
+.trip.featured{grid-column:1 / -1;display:grid;grid-template-columns:1.05fr .95fr}
+.trip:hover{transform:translateY(-4px);box-shadow:0 24px 50px -34px rgba(34,30,25,.55)}
+.trip-photo{aspect-ratio:4/3;overflow:hidden;border-bottom:1px solid var(--line);background:var(--paper-2)}
+.trip.featured .trip-photo{aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--line);min-height:320px}
+.trip-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s ease}
+.trip:hover .trip-photo img{transform:scale(1.04)}
+.trip-body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.trip .when{color:var(--accent-ink);margin-bottom:10px}
+.trip h3{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:12px;line-height:1.2}
+.trip ul{list-style:none;color:var(--muted);font-size:15px}
+.trip li{padding-left:16px;position:relative}
+.trip li+li{margin-top:5px}
+.trip li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--accent)}
+.trip .trip-foot{margin-top:auto;padding-top:18px;font-size:15px}
+.trip .price{font-weight:600}
+
+/* запись */
+.booking{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.dl{display:grid;grid-template-columns:120px 1fr;gap:12px 18px;font-size:15px}
+.dl dt{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding-top:4px}
+.dl a{border-bottom:1px solid var(--line)}
+.dl a:hover{border-bottom-color:var(--accent)}
+.form{display:grid;gap:14px}
+.field label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.field input,.field textarea{width:100%;padding:14px 16px;border:1px solid var(--line);background:var(--paper);font:inherit;font-size:16px;color:var(--ink);transition:border-color .2s ease}
+.field input:focus,.field textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.form-note{color:var(--muted);font-size:13px}
+.status{font-size:14px;color:var(--accent-ink);min-height:20px}
+
+/* подвал */
+.foot{padding:60px 0 34px;background:var(--ink);color:rgba(247,242,232,.72);border-top:0}
+.foot-mark{font-family:var(--serif);font-size:clamp(38px,9vw,110px);line-height:.9;color:rgba(247,242,232,.42);letter-spacing:-.03em;margin-bottom:26px}
+.foot-in{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:14px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)}
+.foot a{border-bottom:1px solid rgba(255,255,255,.25)}
+.foot a:hover{color:#fff}
+.demo{margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,242,232,.62)}
+
+/* появление */
+.js .reveal{opacity:0;transform:translateY(26px)}
+.js .reveal.in{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.h-mask{overflow:hidden}
+.h-mask > span{display:block;transform:translateY(112%)}
+.js .reveal.in .h-mask > span{transform:none;transition:transform 1.05s cubic-bezier(.16,.84,.24,1)}
+.js .btn{transition:transform .25s cubic-bezier(.2,.7,.2,1),background .2s ease,color .2s ease,border-color .2s ease}
+.reveal.d1{transition-delay:.08s}
+.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}
+
+@media (prefers-reduced-motion:reduce){
+  .reveal,.js .reveal{opacity:1;transform:none}
+  .hero-photo img{animation:none;transform:none}
+  .marquee div{animation:none}
+}
+
+@media (max-width:1000px){
+  .practice,.about,.booking{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr;min-height:0;padding-top:64px}
+  .hero-copy{padding:32px 22px 28px}
+  .hero h1{max-width:20ch}
+  .hero-facts{margin-top:28px}
+  .hero-photo{min-height:74vh;order:-1}
+  .hero-photo img{object-position:50% 20%}
+  .trip.featured{grid-template-columns:1fr}
+  .trip.featured .trip-photo{min-height:0;aspect-ratio:4/3;border-right:0;border-bottom:1px solid var(--line)}
+  .nav{display:none}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .trips{grid-template-columns:1fr}
+  .section{padding:56px 0}
+  .hero-in{padding:104px 0 36px}
+  .hero-lede{font-size:16px}
+  .btn{width:100%}
+  .hero-actions{flex-direction:column}
+  .hero-facts{gap:20px;margin-top:34px}
+  .sched td:nth-child(4),.sched th:nth-child(4){display:none}
+  .sched td{padding:14px 6px}
+  .facts{grid-template-columns:1fr}
+  .fact:nth-child(odd){padding-right:0}
+  .dl{grid-template-columns:1fr}
+  .quote-block{padding:64px 0}
+}
+</style>
+  <meta name="theme-color" content="#F5F0E6" id="theme-color">
+  <link rel="stylesheet" href="assets/candle.css" id="candle">
+  <script>
+  /* Тема по солнцу над Петербургом: когда светило уходит ниже −2°, включается
+     «свеча» — это и сумерки, и белые ночи в июне, без ручных порогов по часам.
+     Ручное переопределение для показа: index-candle.html?theme=night|day */
+  (function () {
+    var LAT = 59.9386, LON = 30.3141, RAD = Math.PI / 180, DUSK = -2;
+
+    function sunElevation(date) {
+      var jd = date.getTime() / 86400000 + 2440587.5;
+      var n = jd - 2451545.0;
+      var L = (280.460 + 0.9856474 * n) % 360;
+      var g = ((357.528 + 0.9856003 * n) % 360) * RAD;
+      var lambda = (L + 1.915 * Math.sin(g) + 0.020 * Math.sin(2 * g)) * RAD;
+      var eps = (23.439 - 0.0000004 * n) * RAD;
+      var dec = Math.asin(Math.sin(eps) * Math.sin(lambda));
+      var ra = Math.atan2(Math.cos(eps) * Math.sin(lambda), Math.cos(lambda));
+      var gmst = (18.697374558 + 24.06570982441908 * n) % 24;
+      var lst = (((gmst + LON / 15) % 24) + 24) % 24;
+      var H = lst * 15 * RAD - ra;
+      var lat = LAT * RAD;
+      return Math.asin(Math.sin(lat) * Math.sin(dec) + Math.cos(lat) * Math.cos(dec) * Math.cos(H)) / RAD;
+    }
+
+    var link = document.getElementById('candle');
+    var meta = document.getElementById('theme-color');
+    var forced = null;
+    try { forced = new URLSearchParams(location.search).get('theme'); } catch (e) {}
+
+    function apply(night, elevation) {
+      if (link) link.disabled = !night;
+      if (meta) meta.setAttribute('content', night ? '#1B1512' : '#F5F0E6');
+      document.documentElement.setAttribute('data-theme', night ? 'night' : 'day');
+      document.documentElement.setAttribute('data-sun', elevation.toFixed(1));
+    }
+
+    var elevation = 0;
+    try { elevation = sunElevation(new Date()); } catch (e) {}
+    var night = forced ? forced === 'night' : elevation < DUSK;
+    apply(night, elevation);
+
+    window.__sun = { elevation: sunElevation, apply: apply, dusk: DUSK };
+  })();
+  </script>
+  <style>
+  .sunbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;display:none;gap:10px;align-items:center;
+    padding:10px 14px;border-radius:14px;background:rgba(20,16,12,.88);color:#F3EADC;
+    font:12px/1.3 ui-monospace,Consolas,monospace;letter-spacing:.03em;box-shadow:0 14px 34px -20px rgba(0,0,0,.7)}
+  .sunbar.on{display:flex}
+  .sunbar input[type=range]{flex:1;min-width:80px;accent-color:#D98A3D;height:22px}
+  .sunbar b{font-weight:600}
+  .sunbar .lbl{opacity:.7;white-space:nowrap}
+  html.theme-anim *{transition:background-color .4s ease,color .4s ease,border-color .4s ease}
+  @media (max-width:520px){.sunbar{font-size:11px;padding:8px 10px}}
+  </style>
+</head>
+<body>
+
+<header class="head" id="head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top">Ангелина Бабушкина</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#schedule">Расписание</a>
+      <a href="#practice">Практика</a>
+      <a href="#about">О себе</a>
+      <a href="#trips">Выезды</a>
+      <a href="#booking">Запись</a>
+    </nav>
+    <a class="btn btn-light" href="#booking">Написать</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="hero-eyebrow mono">Йога · Петербург · группы, индивидуальные, выезды</p>
+      <h1>Моё дело — <em>направлять</em>, а не впечатлять.</h1>
+      <p class="hero-lede">Дживамукти, хатха и виньяса. Группы в студиях, индивидуально онлайн и офлайн, выезды и баня. На коврике — дыхание, тело и внимание, без гонки за формой.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#schedule">Где меня найти</a>
+        <a class="btn btn-ghost" href="https://t.me/gelawayoga" rel="noopener">Написать в Telegram</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>Дживамукти</b>традиция, учитель Шэрон Гэннон</div>
+        <div><b>Петербург</b>студии, парк, онлайн</div>
+        <div><b>Выезды</b>баня, ретриты, горы</div>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="assets/hero.webp" width="900" height="1200" alt="Ангелина на улице с микрофоном — ведёт практику" fetchpriority="high">
+      <figcaption class="hero-quote">Уличная практика · Петербург</figcaption>
+    </figure>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div>
+      <span>Spiritual Warrior</span><span>хатха</span><span>виньяса</span><span>йога-нидра</span><span>медитация</span><span>баня</span><span>ретриты</span><span>уличные практики</span>
+      <span>Spiritual Warrior</span><span>хатха</span><span>виньяса</span><span>йога-нидра</span><span>медитация</span><span>баня</span><span>ретриты</span><span>уличные практики</span>
+    </div>
+  </div>
+
+  <section class="section" id="schedule">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker mono">01 / где меня найти</p>
+        <h2>Расписание живое<br>и меняется каждый месяц</h2>
+        <p class="sec-note">Ниже — обычная неделя. Актуальные слоты и переносы всегда в Telegram-канале: студии и часы меняются чаще, чем успеваю обновлять сайт.</p>
+      </div>
+      <table class="sched">
+        <thead>
+          <tr><th>День</th><th>Время</th><th>Практика</th><th>Место</th></tr>
+        </thead>
+        <tbody>
+          <tr class="reveal"><td class="day">Вторник</td><td class="time">[ПОДТВЕРДИТЬ]</td><td class="type">Spiritual Warrior</td><td class="place">[СТУДИЯ]</td></tr>
+          <tr class="reveal"><td class="day">Среда</td><td class="time">[ПОДТВЕРДИТЬ]</td><td class="type">Хатха</td><td class="place">[СТУДИЯ]</td></tr>
+          <tr class="reveal"><td class="day">Пятница</td><td class="time">[ПОДТВЕРДИТЬ]</td><td class="type">Виньяса</td><td class="place">[СТУДИЯ]</td></tr>
+          <tr class="reveal"><td class="day">Воскресенье</td><td class="time">[ПОДТВЕРДИТЬ]</td><td class="type">Мягкая практика / йога-нидра</td><td class="place">[СТУДИЯ]</td></tr>
+        </tbody>
+      </table>
+      <p class="sched-foot reveal">
+        <span>Индивидуально — онлайн или офлайн, время подбираем вместе.</span>
+        <a class="btn" href="https://t.me/gelawayoga" rel="noopener">Спросить про слоты</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="quote-block" id="quote">
+    <div class="wrap">
+      <span class="mark">«</span>
+      <p data-split>можно падать, и там ничего ужасного</p>
+      <small>из практики</small>
+    </div>
+  </section>
+
+  <section class="section" id="practice">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker mono">02 / как проходит практика</p>
+        <h2>Сначала дыхание,<br>потом форма</h2>
+      </div>
+      <div class="practice">
+        <div class="steps reveal">
+          <div class="step">
+            <span class="num">01</span>
+            <div><h3>Дыхание первым</h3><p>Начинаем с дыхания и только потом двигаемся. Сбилось — сбавили темп; это не поражение, а работа.</p></div>
+          </div>
+          <div class="step">
+            <span class="num">02</span>
+            <div><h3>Взгляд и внимание</h3><p>Смотрим, куда направлено внимание: в сравнение с соседом по коврику или в собственное тело. Второе полезнее.</p></div>
+          </div>
+          <div class="step">
+            <span class="num">03</span>
+            <div><h3>Можно падать</h3><p>Балансы — не экзамен. Подойдёт и тем, кого бакасаной не удивить, и тем, кого балансы пока пугают.</p></div>
+          </div>
+        </div>
+        <figure class="shot reveal d1">
+          <img src="assets/class.webp" width="1200" height="1597" alt="Групповая практика на траве, лето, много ковриков" loading="lazy" decoding="async">
+          <figcaption>Практика на улице. У большинства это второй раз в жизни.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker mono">03 / о себе</p>
+        <h2>Ушла из офиса<br>и не вернулась</h2>
+      </div>
+      <div class="about">
+        <div class="reveal">
+          <p>Меня зовут Ангелина. До йоги работала в таможне и логистике, а потом ушла в преподавание целиком. Сейчас <strong>больше года</strong> веду классы в студиях Петербурга.</p>
+          <p>Учусь в традиции <strong>Дживамукти</strong>: мой учитель — Шэрон Гэннон, регулярно езжу на семинары по ассистированию и сдаю экзамены. Кроме асан — тайский массаж, работа с дыханием, йога-нидра и медитация.</p>
+          <p>Веду смешанные группы: приходят и опытные, и те, кто на йоге второй раз в жизни. Подстраиваю практику под человека, а не человека под практику.</p>
+          <dl class="facts">
+            <div class="fact"><dt class="mono">Традиция</dt><dd>Дживамукти, хатха, виньяса</dd></div>
+            <div class="fact"><dt class="mono">Учитель</dt><dd>Шэрон Гэннон</dd></div>
+            <div class="fact"><dt class="mono">Преподаю</dt><dd>[ПОДТВЕРДИТЬ] лет</dd></div>
+            <div class="fact"><dt class="mono">Дипломы</dt><dd>[ПОДТВЕРДИТЬ]</dd></div>
+          </dl>
+        </div>
+        <figure class="about-photo reveal d1">
+          <img src="assets/portrait2.webp" width="1100" height="825" alt="Ангелина на улице в белой толстовке" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trips">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker mono">04 / выезды и баня</p>
+        <h2>То, что не помещается<br>в класс</h2>
+        <p class="sec-note">Три дня в доме с панорамными окнами, парения с чаем, горы. Мест всегда немного — в прошлую Грузию было восемь человек.</p>
+      </div>
+      <div class="trips-wrap">
+        <div class="band reveal">
+          <img src="assets/house.webp" width="1200" height="1600" alt="Тёмный дом с панорамными окнами в лесу" loading="lazy" decoding="async" data-parallax="0.12">
+          <div class="band-in">
+            <div class="wrap">
+              <p class="when mono">3–5 января · Карма Хаус</p>
+              <h3>Три дня практики</h3>
+              <ul>
+                <li>йога и медитации</li>
+                <li>трёхразовое питание</li>
+                <li>баня и парения</li>
+                <li>чайные церемонии</li>
+                <li>снежные прогулки</li>
+              </ul>
+              <p class="band-foot">
+                <span class="price">Стоимость и трансфер — [ПОДТВЕРДИТЬ]</span>
+                <a class="btn btn-light" href="#booking">Написать про ретрит</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trips">
+        <article class="trip reveal">
+          <div class="trip-body">
+            <p class="when mono">Выезд на день · баня</p>
+            <h3>Пять часов с парениями</h3>
+            <ul><li>2 часа практики</li><li>3 часа баня и парения</li><li>чай и сеновал</li></ul>
+            <p class="trip-foot"><span class="price">6 500 ₽ · предоплата 3 000 ₽</span><br><span class="mono">цены прошлого выезда</span></p>
+          </div>
+        </article>
+        <article class="trip reveal d1">
+          <div class="trip-body">
+            <p class="when mono">Кэмп · Грузия</p>
+            <h3>Горы и глэмпинг-тенты</h3>
+            <ul><li>практики на воздухе</li><li>хайкинг</li><li>восемь участниц</li></ul>
+            <p class="trip-foot"><span class="mono">прошлый кэмп · следующий — по набору</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="booking">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker mono">05 / запись</p>
+        <h2>Напишите пару строк</h2>
+        <p class="sec-note">Группа, индивидуально, баня или ретрит — отвечаю сама, обычно в тот же день.</p>
+      </div>
+      <div class="booking">
+        <dl class="dl reveal">
+          <dt>Телеграм</dt><dd><a href="https://t.me/gelawayoga" rel="noopener">@gelawayoga</a> — канал и личные сообщения</dd>
+          <dt>Город</dt><dd>Санкт-Петербург, студии уточняются на неделе</dd>
+          <dt>Онлайн</dt><dd>группа и индивидуально, ссылку присылаю перед практикой</dd>
+          <dt>Телефон</dt><dd>[ПОДТВЕРДИТЬ]</dd>
+        </dl>
+        <form class="form reveal d1" id="bookingForm" novalidate>
+          <div class="field"><label for="f-name">Имя</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Как вас зовут"></div>
+          <div class="field"><label for="f-contact">Телефон или телеграм</label><input id="f-contact" name="contact" type="text" autocomplete="tel" placeholder="@ник или +7 ___ ___-__-__"></div>
+          <div class="field"><label for="f-what">Что интересует</label><textarea id="f-what" name="what" rows="3" placeholder="Группа, индивидуально, баня или ретрит; удобные дни"></textarea></div>
+          <button class="btn" type="submit">Отправить</button>
+          <p class="form-note">Демо-форма: данные никуда не отправляются.</p>
+          <p class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="marquee marquee-rev" aria-hidden="true">
+    <div>
+      <span>дыхание</span><span>внимание</span><span>коврик</span><span>чай</span><span>парение</span><span>горы</span><span>тишина</span><span>смех</span>
+      <span>дыхание</span><span>внимание</span><span>коврик</span><span>чай</span><span>парение</span><span>горы</span><span>тишина</span><span>смех</span>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-mark">Ангелина<br>Бабушкина</p>
+    <div class="foot-in">
+      <span>йога · Санкт-Петербург</span>
+      <span><a href="https://t.me/gelawayoga" rel="noopener">@gelawayoga</a></span>
+    </div>
+    <p class="demo">Демонстрационный макет. Не является сайтом преподавателя</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* шапка */
+  var head = document.getElementById('head');
+  var onScrollHead = function () {
+    head.classList.toggle('solid', window.scrollY > 40);
+  };
+  onScrollHead();
+  window.addEventListener('scroll', onScrollHead, { passive: true });
+
+  /* цитата по словам */
+  document.querySelectorAll('[data-split]').forEach(function (el) {
+    var words = el.textContent.trim().split(/\s+/);
+    el.textContent = '';
+    words.forEach(function (w, i) {
+      var s = document.createElement('span');
+      s.className = 'w';
+      s.textContent = w;
+      s.style.transitionDelay = (i * 0.055) + 's';
+      el.appendChild(s);
+      if (i < words.length - 1) el.appendChild(document.createTextNode(' '));
+    });
+  });
+
+  /* появление */
+  var items = document.querySelectorAll('.reveal, .quote-block');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* маска заголовков */
+  document.querySelectorAll('.reveal h2').forEach(function (h) {
+    h.classList.add('h-mask');
+    h.innerHTML = '<span>' + h.innerHTML + '</span>';
+  });
+
+  /* магнитные кнопки */
+  if (!reduce && window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.btn').forEach(function (b) {
+      b.addEventListener('mousemove', function (e) {
+        var r = b.getBoundingClientRect();
+        var dx = (e.clientX - (r.left + r.width / 2)) / r.width;
+        var dy = (e.clientY - (r.top + r.height / 2)) / r.height;
+        b.style.transform = 'translate(' + (dx * 6).toFixed(1) + 'px,' + (dy * 4 - 1).toFixed(1) + 'px)';
+      });
+      b.addEventListener('mouseleave', function () { b.style.transform = ''; });
+    });
+  }
+
+  /* параллакс фото */
+  var px = [].slice.call(document.querySelectorAll('[data-parallax]'));
+  if (px.length && !reduce) {
+    var ticking = false;
+    var apply = function () {
+      var vh = window.innerHeight;
+      px.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        var k = parseFloat(el.getAttribute('data-parallax')) || 0.1;
+        var shift = (r.top + r.height / 2 - vh / 2) * -k;
+        el.style.transform = 'translate3d(0,' + shift.toFixed(1) + 'px,0)';
+      });
+      ticking = false;
+    };
+    var request = function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(apply); }
+    };
+    apply();
+    window.addEventListener('scroll', request, { passive: true });
+    window.addEventListener('resize', request);
+  }
+
+  /* форма */
+  var form = document.getElementById('bookingForm');
+  var status = form.querySelector('.status');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var contact = form.contact.value.trim();
+    if (name.length < 2) { status.textContent = 'Напишите имя.'; form.name.focus(); return; }
+    if (contact.length < 3) { status.textContent = 'Оставьте телеграм или телефон.'; form.contact.focus(); return; }
+    status.textContent = 'Спасибо, ' + name + '. В демо-версии данные не отправляются.';
+    form.reset();
+  });
+})();
+</script>
+  <div class="sunbar" id="sunbar" role="group" aria-label="Время суток в Петербурге">
+    <span class="lbl">время</span><b id="sunTime">18:00</b>
+    <input type="range" id="sunRange" min="0" max="1435" step="5" value="1080" aria-label="Время суток в Петербурге">
+    <span class="lbl" id="sunState">сумерки</span><b id="sunEl">0°</b>
+  </div>
+  <script>
+  /* Ползунок времени суток: доступен по ?demo=1 — проверить, как выглядит
+     страница в любой час, не дожидаясь вечера. На обычный вход не влияет. */
+  (function () {
+    if (!/[?&]demo/.test(location.search) || !window.__sun) return;
+    var bar = document.getElementById('sunbar');
+    var range = document.getElementById('sunRange');
+    var outT = document.getElementById('sunTime');
+    var outS = document.getElementById('sunState');
+    var outE = document.getElementById('sunEl');
+    if (!bar || !range) return;
+    bar.classList.add('on');
+    document.documentElement.classList.add('theme-anim');
+
+    var pad = function (v) { return (v < 10 ? '0' : '') + v; };
+
+    function spbDate() {
+      var t = new Date(Date.now() + 3 * 3600000); // Петербург = UTC+3 круглый год
+      return { y: t.getUTCFullYear(), m: t.getUTCMonth(), d: t.getUTCDate(), h: t.getUTCHours(), mi: t.getUTCMinutes() };
+    }
+
+    function render(minutes) {
+      var base = spbDate();
+      var at = new Date(Date.UTC(base.y, base.m, base.d, Math.floor(minutes / 60) - 3, minutes % 60));
+      var e = window.__sun.elevation(at);
+      var night = e < window.__sun.dusk;
+      window.__sun.apply(night, e);
+      outT.textContent = pad(Math.floor(minutes / 60)) + ':' + pad(minutes % 60);
+      outS.textContent = !night ? 'день' : (e < -12 ? 'ночь' : 'сумерки');
+      outE.textContent = (e >= 0 ? '+' : '\u2212') + Math.abs(e).toFixed(1) + '\u00b0';
+      range.setAttribute('aria-valuetext', outT.textContent + ', ' + outS.textContent + ', солнце ' + outE.textContent);
+    }
+
+    var now = spbDate();
+    var start = Math.round((now.h * 60 + now.mi) / 5) * 5;
+    if (start > 1435) start = 1435;
+    range.value = String(start);
+    render(start);
+
+    range.addEventListener('input', function () { render(parseInt(range.value, 10)); });
+    range.addEventListener('change', function () { render(parseInt(range.value, 10)); });
+  })();
+  </script>
+</body>
+</html>
