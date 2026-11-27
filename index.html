@@ -193,6 +193,10 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
 /* появление */
 .js .reveal{opacity:0;transform:translateY(26px)}
 .js .reveal.in{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.h-mask{overflow:hidden}
+.h-mask > span{display:block;transform:translateY(112%)}
+.js .reveal.in .h-mask > span{transform:none;transition:transform 1.05s cubic-bezier(.16,.84,.24,1)}
+.js .btn{transition:transform .25s cubic-bezier(.2,.7,.2,1),background .2s ease,color .2s ease,border-color .2s ease}
 .reveal.d1{transition-delay:.08s}
 .reveal.d2{transition-delay:.16s}
 .reveal.d3{transition-delay:.24s}
@@ -498,6 +502,25 @@ h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.04;fo
     items.forEach(function (el) { io.observe(el); });
   } else {
     items.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* маска заголовков */
+  document.querySelectorAll('.reveal h2').forEach(function (h) {
+    h.classList.add('h-mask');
+    h.innerHTML = '<span>' + h.innerHTML + '</span>';
+  });
+
+  /* магнитные кнопки */
+  if (!reduce && window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.btn').forEach(function (b) {
+      b.addEventListener('mousemove', function (e) {
+        var r = b.getBoundingClientRect();
+        var dx = (e.clientX - (r.left + r.width / 2)) / r.width;
+        var dy = (e.clientY - (r.top + r.height / 2)) / r.height;
+        b.style.transform = 'translate(' + (dx * 6).toFixed(1) + 'px,' + (dy * 4 - 1).toFixed(1) + 'px)';
+      });
+      b.addEventListener('mouseleave', function () { b.style.transform = ''; });
+    });
   }
 
   /* параллакс фото */
