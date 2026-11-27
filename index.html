@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ангелина Бабушкина — йога в Петербурге</title>
 <meta name="description" content="Дживамукти, хатха и виньяса в Петербурге: группы в студиях, индивидуальные занятия онлайн и офлайн, выезды, баня и ретриты. Расписание и запись.">
+<link rel="preload" as="image" href="assets/hero.webp" type="image/webp" fetchpriority="high">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23221E19'/%3E%3Cpath d='M6 22c6-8 14-8 20 0' stroke='%23D69A5E' stroke-width='2' fill='none'/%3E%3C/svg%3E">
 <script>document.documentElement.className += ' js';</script>
 <style>
@@ -32,12 +33,10 @@ img{display:block;max-width:100%}
 .mono{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
 
 /* зерно */
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.045;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-  mix-blend-mode:multiply}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;background-image:url("assets/noise.png");background-size:64px 64px}
 
 /* шапка */
-.head{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(245,240,230,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:padding .35s ease;padding:14px 0}
+.head{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(245,240,230,.97);border-bottom:1px solid var(--line);transition:padding .35s ease;padding:14px 0}
 .head-in{display:flex;align-items:center;gap:26px}
 .brand{font-family:var(--serif);font-size:20px;color:var(--ink);letter-spacing:.01em}
 .nav{display:flex;gap:22px;margin-left:auto}
